@@ -1,0 +1,122 @@
+package controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import model.MainConversionModel;
+import view.MainGui;
+
+
+public class MainConversionController{
+
+	protected MainGui mainGui;
+    protected MainConversionModel mainConversionModel;
+    private ImageProcessingPanelController frameList[]; 
+    final int TOTAL_PANELS = 2;
+   
+      
+    public MainConversionController(MainGui mainGui) {
+    	this.mainGui = mainGui;
+        this.mainConversionModel = new MainConversionModel();
+        this.setupImageProcessingPanels();
+        this.updateImageProcessingPanel();
+//        this.updateLabelsTexts();
+        this.mainGui.getBtnCancel().addActionListener(new CancelButtonListener(this));
+        this.mainGui.getBtnFinish().addActionListener(new CancelButtonListener(this));
+        this.mainGui.getBtnBack().addActionListener(new BackButtonListener(this));
+        this.mainGui.getBtnNext().addActionListener(new NextButtonListener(this));
+    }
+    
+   private void setupImageProcessingPanels() {
+    	this.frameList = new ImageProcessingPanelController[TOTAL_PANELS];
+    	this.frameList[0] = new WelcomeController();
+    	this.frameList[1] = new ConversionController();
+//    	this.frameList[2] = new GrayscaleController();
+//    	this.frameList[3] = new SmoothFilterController();
+//    	this.frameList[1] = new PartionatedOtsuController();
+//    	//this.frameList[5] = new EraseNoiseController();
+//    	//this.frameList[6] = new FillHolesController();
+//    	this.frameList[5] = new WatershedController();
+//    	//this.frameList[8] = new MaxCirclesController();
+//    	this.frameList[6] = new AnalyzeParticlesController();
+    	
+    	
+    }
+    
+//   protected void updateLabelsTexts() {
+//	   int idImageProcessingPanel;
+//	   for (idImageProcessingPanel = 0; idImageProcessingPanel < TOTAL_PANELS; idImageProcessingPanel++) {
+//		   mainGui.getLabelList()[idImageProcessingPanel].setText(this.frameList[idImageProcessingPanel].getPanelView().getPanelTitle());
+//		   if (idImageProcessingPanel == mainConversionModel.getIdActualFrame()) {
+//			   mainGui.getLabelList()[idImageProcessingPanel].setForeground(Color.red);
+//		   }
+//		   else {
+//			   mainGui.getLabelList()[idImageProcessingPanel].setForeground(Color.black);
+//		   }
+//	   }
+//   }
+//    
+   protected void updateImageProcessingPanel() {
+	   mainGui.setImagePocessingPanel(this.frameList[mainConversionModel.getIdActualFrame()].getPanelView());
+   }
+   
+   protected boolean isFinalPanel() {
+	   if (mainConversionModel.getIdActualFrame() == TOTAL_PANELS - 1) {
+		   return true;
+	   }
+	   return false;
+   }
+}
+
+class CancelButtonListener implements ActionListener{
+	private MainConversionController mainConversionController; 
+	
+	public CancelButtonListener(MainConversionController mainConversionController) {
+		this.mainConversionController = mainConversionController;
+	}
+	
+	 @Override
+	 public void actionPerformed(ActionEvent e) {
+		 this.mainConversionController.mainGui.dispose();
+	 }
+}
+
+class BackButtonListener implements ActionListener{
+	private MainConversionController mainConversionController; 
+	
+	public BackButtonListener(MainConversionController mainConversionController) {
+		this.mainConversionController = mainConversionController;
+	}
+	
+	 @Override
+	 public void actionPerformed(ActionEvent e) {
+  		this.mainConversionController.mainConversionModel.gotoBackFrame();
+ 		this.mainConversionController.updateImageProcessingPanel();
+// 		this.mainConversionController.updateLabelsTexts();
+		if (!this.mainConversionController.isFinalPanel()) {
+			this.mainConversionController.mainGui.getBtnNext().setVisible(true);
+			this.mainConversionController.mainGui.getBtnFinish().setVisible(false);
+			this.mainConversionController.mainGui.repaint();
+		}
+	 }
+}
+
+class NextButtonListener implements ActionListener{
+	private MainConversionController mainConversionController;
+	
+	public NextButtonListener(MainConversionController mainConversionController) {
+		this.mainConversionController = mainConversionController;
+	}
+	
+	 @Override
+	 public void actionPerformed(ActionEvent e) {
+		this.mainConversionController.mainConversionModel.gotoNextFrame(mainConversionController.TOTAL_PANELS);
+ 		this.mainConversionController.updateImageProcessingPanel();
+// 		this.mainConversionController.updateLabelsTexts();
+		if (this.mainConversionController.isFinalPanel()) {
+			this.mainConversionController.mainGui.getBtnNext().setVisible(false);
+			this.mainConversionController.mainGui.getBtnFinish().setVisible(true);
+			this.mainConversionController.mainGui.repaint();
+		}
+	 }
+}

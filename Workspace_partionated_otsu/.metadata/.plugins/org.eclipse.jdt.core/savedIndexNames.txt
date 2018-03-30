@@ -1,0 +1,20 @@
+INDEX VERSION 1.130+/home/lais/Documents/Workspace_partionated_otsu/.metadata/.plugins/org.eclipse.jdt.core
+4135061652.index
+2067495566.index
+2469821080.index
+4098700517.index
+1983966916.index
+1079507689.index
+2078442509.index
+1708553016.index
+2654618637.index
+4065510954.index
+4065103173.index
+348703955.index
+373750101.index
+1106198393.index
+4265465964.index
+819629768.index
+1093586464.index
+290242155.index
+2758825642.index

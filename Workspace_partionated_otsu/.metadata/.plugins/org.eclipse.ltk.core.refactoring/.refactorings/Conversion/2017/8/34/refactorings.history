@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;controller.MainController&apos; to &apos;MainConversionController&apos;&#x0A;- Original project: &apos;Conversion&apos;&#x0A;- Original element: &apos;controller.MainController&apos;&#x0A;- Renamed element: &apos;controller.MainConversionController&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MainController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;controller{MainController.java[MainController" matchStrategy="1" name="MainConversionController" qualified="false" references="true" similarDeclarations="false" stamp="1503779622926" textual="false" version="1.0"/>
+</session>

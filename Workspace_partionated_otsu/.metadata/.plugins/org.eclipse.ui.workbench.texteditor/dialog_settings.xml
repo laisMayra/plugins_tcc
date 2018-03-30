@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="422" key="DIALOG_X_ORIGIN"/>
+		<item value="265" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="image" key="selection"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="true" key="wholeword"/>
+		<list key="findhistory">
+			<item value="image"/>
+			<item value="imag"/>
+			<item value="originalImage"/>
+			<item value="ROI"/>
+			<item value="im"/>
+			<item value="n"/>
+			<item value="m"/>
+			<item value="line"/>
+			<item value="imp2"/>
+			<item value="test"/>
+			<item value="roiH"/>
+			<item value="roiW"/>
+			<item value="imp"/>
+			<item value="mainController"/>
+			<item value="mainGui"/>
+		</list>
+		<list key="replacehistory">
+			<item value="image"/>
+			<item value="imageProcessor"/>
+			<item value="collum"/>
+			<item value="line"/>
+			<item value="newImage"/>
+			<item value="copyImage"/>
+			<item value="lineHeight"/>
+			<item value="collumWidth"/>
+			<item value="originalImage"/>
+			<item value="mainLmavController"/>
+			<item value="mainLamavGui"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="312" key="DIALOG_WIDTH"/>
+		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="362" key="DIALOG_HEIGHT"/>
+		<item value="832" key="DIALOG_X_ORIGIN"/>
+		<item value="587" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
