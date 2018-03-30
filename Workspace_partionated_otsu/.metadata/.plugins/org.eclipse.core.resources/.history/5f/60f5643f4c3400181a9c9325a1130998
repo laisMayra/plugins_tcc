@@ -51,7 +51,7 @@ public class PartionatedOtsuPanel extends ImageProcessingPanel{
 				+ "\nAn example can be seen below.");
 		try  {
 			//Insert image on screen
-			URL url = new URL("https://github.com/laisMayra/plugins_tcc/blob/master/image.png?raw=true");
+			URL url = new URL("https://github.com/laisMayra/TCC_plugins/blob/master/image.png?raw=true");
 			myPicture = ImageIO.read(url);
 
 			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
