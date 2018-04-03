@@ -1,0 +1,18 @@
+ 	Image	Quantidade em 0	Quantidade em 255
+1	Default	16028	63941
+2	Huang	22587	57382
+3	Intermodes	10847	69122
+4	IsoData	16028	63941
+5	Li	12394	67575
+6	MaxEntropy	10847	69122
+7	Mean	22154	57815
+8	MinError(I) 	38734	41235
+9	Minimum	5512	74457
+10	Moments	16028	63941
+11	Otsu	16497	63472
+12	Percentile	27277	52692
+13	RenyiEntropy	9444	70525
+14	Shanbhag	14238	65731
+15	Triangle	18314	61655
+16	Yen	5614	74355
+17	Otsu Particionado	5466	74503
